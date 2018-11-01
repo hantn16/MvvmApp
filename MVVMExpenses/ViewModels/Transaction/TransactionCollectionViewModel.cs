@@ -7,7 +7,7 @@ using MVVMExpenses.MyDbContextDataModel;
 using MVVMExpenses.Common;
 using MVVMExpenses.DataModels;
 
-namespace MVVMExpenses.ViewModels {
+namespace MVVMExpenses.Models.ViewModels {
 
     /// <summary>
     /// Represents the Transactions collection view model.

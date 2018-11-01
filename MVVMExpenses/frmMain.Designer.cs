@@ -48,6 +48,7 @@
             // documentManager1
             // 
             this.documentManager1.ContainerControl = this;
+            this.documentManager1.RibbonAndBarsMergeStyle = DevExpress.XtraBars.Docking2010.Views.RibbonAndBarsMergeStyle.Always;
             this.documentManager1.View = this.tabbedView1;
             this.documentManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
             this.tabbedView1});
@@ -73,6 +74,7 @@
             this.biTransactions});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.MaxItemId = 5;
+            this.ribbonControl1.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -82,7 +84,7 @@
             // 
             this.biAccounts.Caption = "Accounts";
             this.biAccounts.Id = 2;
-            this.biAccounts.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.biAccounts.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("biAccounts.ImageOptions.Image")));
             this.biAccounts.Name = "biAccounts";
             this.biAccounts.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -90,7 +92,7 @@
             // 
             this.biCategories.Caption = "Categories";
             this.biCategories.Id = 3;
-            this.biCategories.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.biCategories.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("biCategories.ImageOptions.Image")));
             this.biCategories.Name = "biCategories";
             this.biCategories.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -98,7 +100,7 @@
             // 
             this.biTransactions.Caption = "Transactions";
             this.biTransactions.Id = 4;
-            this.biTransactions.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
+            this.biTransactions.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("biTransactions.ImageOptions.Image")));
             this.biTransactions.Name = "biTransactions";
             this.biTransactions.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 

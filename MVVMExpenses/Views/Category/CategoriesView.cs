@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace MVVMExpenses.Views.Category
 {
+    [DevExpress.Utils.MVVM.UI.ViewType("CategoryCollectionView")]
     public partial class CategoriesView : UserControl
     {
         public CategoriesView()

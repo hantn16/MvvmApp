@@ -8,12 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MVVMExpenses.Views.Transaction
+namespace MVVMExpenses.Views.Category
 {
-    [DevExpress.Utils.MVVM.UI.ViewType("TransactionCollectionView")]
-    public partial class TransactionsView : UserControl
+    public partial class CategoriesEditFormView : DevExpress.XtraEditors.XtraUserControl
     {
-        public TransactionsView()
+        public CategoriesEditFormView()
         {
             InitializeComponent();
         }

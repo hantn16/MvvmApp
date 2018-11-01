@@ -1,4 +1,5 @@
-﻿using MVVMExpenses.ViewModels;
+﻿using DevExpress.XtraBars.Ribbon;
+using MVVMExpenses.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +20,14 @@ namespace MVVMExpenses
             //this.Opacity = 0;
             if (!DesignMode)
                 InitializeNavigation();
+            ribbonControl1.Merge += ribbonControl1_Merge;
         }
+
+        void ribbonControl1_Merge(object sender, RibbonMergeEventArgs e)
+        {
+            ribbonControl1.SelectedPage = e.MergedChild.SelectedPage;
+        }
+
         //public virtual TModule DefaultModule { get { return Modules.ElementAt(2)}; }
         void InitializeNavigation()
         {

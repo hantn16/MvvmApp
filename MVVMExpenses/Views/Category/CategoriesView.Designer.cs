@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             this.bbiNew = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.bbiEdit = new DevExpress.XtraBars.BarButtonItem();
             this.bbiDelete = new DevExpress.XtraBars.BarButtonItem();
             this.bbiRefresh = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext1)).BeginInit();
             this.SuspendLayout();
@@ -52,27 +52,11 @@
             this.bbiRefresh});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.MaxItemId = 7;
+            this.ribbonControl1.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.ribbonControl1.Size = new System.Drawing.Size(766, 141);
-            // 
-            // ribbonPage1
-            // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup2});
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "ribbonPage1";
-            // 
-            // mvvmContext1
-            // 
-            this.mvvmContext1.BindingExpressions.AddRange(new DevExpress.Utils.MVVM.BindingExpression[] {
-            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(MVVMExpenses.ViewModels.CategoryCollectionViewModel), "New", this.bbiNew),
-            DevExpress.Utils.MVVM.BindingExpression.CreateParameterizedCommandBinding(typeof(MVVMExpenses.ViewModels.CategoryCollectionViewModel), "Edit", "SelectedEntity", this.bbiEdit),
-            DevExpress.Utils.MVVM.BindingExpression.CreateParameterizedCommandBinding(typeof(MVVMExpenses.ViewModels.CategoryCollectionViewModel), "Delete", "SelectedEntity", this.bbiDelete),
-            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(MVVMExpenses.ViewModels.CategoryCollectionViewModel), "Refresh", this.bbiRefresh)});
-            this.mvvmContext1.ContainerControl = this;
-            this.mvvmContext1.ViewModelType = typeof(MVVMExpenses.ViewModels.CategoryCollectionViewModel);
             // 
             // bbiNew
             // 
@@ -80,14 +64,6 @@
             this.bbiNew.Id = 1;
             this.bbiNew.ImageOptions.ImageUri.Uri = "New";
             this.bbiNew.Name = "bbiNew";
-            // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.bbiNew);
-            this.ribbonPageGroup2.ItemLinks.Add(this.bbiEdit);
-            this.ribbonPageGroup2.ItemLinks.Add(this.bbiDelete);
-            this.ribbonPageGroup2.ItemLinks.Add(this.bbiRefresh);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             // 
             // bbiEdit
             // 
@@ -109,6 +85,31 @@
             this.bbiRefresh.Id = 6;
             this.bbiRefresh.ImageOptions.ImageUri.Uri = "Refresh";
             this.bbiRefresh.Name = "bbiRefresh";
+            // 
+            // ribbonPage1
+            // 
+            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup2});
+            this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "ribbonPage1";
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.bbiNew);
+            this.ribbonPageGroup2.ItemLinks.Add(this.bbiEdit);
+            this.ribbonPageGroup2.ItemLinks.Add(this.bbiDelete);
+            this.ribbonPageGroup2.ItemLinks.Add(this.bbiRefresh);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            // 
+            // mvvmContext1
+            // 
+            this.mvvmContext1.BindingExpressions.AddRange(new DevExpress.Utils.MVVM.BindingExpression[] {
+            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(MVVMExpenses.Models.ViewModels.CategoryCollectionViewModel), "New", this.bbiNew),
+            DevExpress.Utils.MVVM.BindingExpression.CreateParameterizedCommandBinding(typeof(MVVMExpenses.Models.ViewModels.CategoryCollectionViewModel), "Edit", "SelectedEntity", this.bbiEdit),
+            DevExpress.Utils.MVVM.BindingExpression.CreateParameterizedCommandBinding(typeof(MVVMExpenses.Models.ViewModels.CategoryCollectionViewModel), "Delete", "SelectedEntity", this.bbiDelete),
+            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(MVVMExpenses.Models.ViewModels.CategoryCollectionViewModel), "Refresh", this.bbiRefresh)});
+            this.mvvmContext1.ContainerControl = this;
+            this.mvvmContext1.ViewModelType = typeof(MVVMExpenses.Models.ViewModels.CategoryCollectionViewModel);
             // 
             // CategoriesView
             // 

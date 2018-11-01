@@ -10,10 +10,9 @@ using System.Windows.Forms;
 
 namespace MVVMExpenses.Views.Transaction
 {
-    [DevExpress.Utils.MVVM.UI.ViewType("TransactionCollectionView")]
-    public partial class TransactionsView : UserControl
+    public partial class TransactionsEditFormView : DevExpress.XtraEditors.XtraUserControl
     {
-        public TransactionsView()
+        public TransactionsEditFormView()
         {
             InitializeComponent();
         }

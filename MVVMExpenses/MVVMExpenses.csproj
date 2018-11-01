@@ -106,9 +106,11 @@
     <Compile Include="ViewModels\Account\AccountCollectionViewModel.cs" />
     <Compile Include="ViewModels\Account\AccountViewModel.cs" />
     <Compile Include="ViewModels\Category\CategoryCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Category\CategoryViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\MyDbContextViewModel.cs" />
     <Compile Include="ViewModels\Transaction\TransactionCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Transaction\TransactionViewModel.cs" />
     <Compile Include="Views\Account\AccountsEditFormView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -121,11 +123,23 @@
     <Compile Include="Views\Account\AccountsView.Designer.cs">
       <DependentUpon>AccountsView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Category\CategoriesEditFormView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Category\CategoriesEditFormView.Designer.cs">
+      <DependentUpon>CategoriesEditFormView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Category\CategoriesView.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\Category\CategoriesView.Designer.cs">
       <DependentUpon>CategoriesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Transaction\TransactionsEditFormView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Transaction\TransactionsEditFormView.Designer.cs">
+      <DependentUpon>TransactionsEditFormView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Transaction\TransactionsView.cs">
       <SubType>UserControl</SubType>
@@ -152,14 +166,22 @@
     <EmbeddedResource Include="Views\Account\AccountsView.resx">
       <DependentUpon>AccountsView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Category\CategoriesEditFormView.resx">
+      <DependentUpon>CategoriesEditFormView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Category\CategoriesView.resx">
       <DependentUpon>CategoriesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Transaction\TransactionsEditFormView.resx">
+      <DependentUpon>TransactionsEditFormView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Transaction\TransactionsView.resx">
       <DependentUpon>TransactionsView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\MVVMExpenses.DataModels.Account.datasource" />
+    <None Include="Properties\DataSources\MVVMExpenses.DataModels.Category.datasource" />
+    <None Include="Properties\DataSources\MVVMExpenses.DataModels.Transaction.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
