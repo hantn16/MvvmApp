@@ -56,31 +56,25 @@
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.NameTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.AmountTextEdit = new DevExpress.XtraEditors.SpinEdit();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForName = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForAmount = new DevExpress.XtraLayout.LayoutControlItem();
-            this.TransactionsGridControl = new DevExpress.XtraGrid.GridControl();
-            this.ItemForTransactions = new DevExpress.XtraLayout.LayoutControlItem();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.AmountTextEdit = new DevExpress.XtraEditors.SpinEdit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NameTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AmountTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForAmount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TransactionsGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForTransactions)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AmountTextEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // mvvmContext1
@@ -317,16 +311,52 @@
             // dataLayoutControl1
             // 
             this.dataLayoutControl1.Controls.Add(this.NameTextEdit);
-            this.dataLayoutControl1.Controls.Add(this.TransactionsGridControl);
             this.dataLayoutControl1.Controls.Add(this.AmountTextEdit);
             this.dataLayoutControl1.DataSource = this.accountBindingSource;
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControl1.Location = new System.Drawing.Point(0, 141);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(587, 198);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(587, 68);
             this.dataLayoutControl1.TabIndex = 3;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
+            // 
+            // NameTextEdit
+            // 
+            this.NameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.accountBindingSource, "Name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.NameTextEdit.Location = new System.Drawing.Point(64, 12);
+            this.NameTextEdit.MenuManager = this.ribbonControl1;
+            this.NameTextEdit.Name = "NameTextEdit";
+            this.NameTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.NameTextEdit.Size = new System.Drawing.Size(511, 20);
+            this.NameTextEdit.StyleController = this.dataLayoutControl1;
+            this.NameTextEdit.TabIndex = 4;
+            // 
+            // accountBindingSource
+            // 
+            this.accountBindingSource.DataSource = typeof(MVVMExpenses.DataModels.Account);
+            // 
+            // AmountTextEdit
+            // 
+            this.AmountTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.accountBindingSource, "Amount", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.AmountTextEdit.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.AmountTextEdit.Location = new System.Drawing.Point(64, 36);
+            this.AmountTextEdit.MenuManager = this.ribbonControl1;
+            this.AmountTextEdit.Name = "AmountTextEdit";
+            this.AmountTextEdit.Properties.Appearance.Options.UseTextOptions = true;
+            this.AmountTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.AmountTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.AmountTextEdit.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.AmountTextEdit.Properties.Mask.EditMask = "c";
+            this.AmountTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.AmountTextEdit.Size = new System.Drawing.Size(511, 20);
+            this.AmountTextEdit.StyleController = this.dataLayoutControl1;
+            this.AmountTextEdit.TabIndex = 5;
             // 
             // layoutControlGroup1
             // 
@@ -336,12 +366,8 @@
             this.layoutControlGroup2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(587, 198);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(587, 68);
             this.layoutControlGroup1.TextVisible = false;
-            // 
-            // accountBindingSource
-            // 
-            this.accountBindingSource.DataSource = typeof(MVVMExpenses.DataModels.Account);
             // 
             // layoutControlGroup2
             // 
@@ -349,22 +375,10 @@
             this.layoutControlGroup2.GroupBordersVisible = false;
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.ItemForName,
-            this.ItemForAmount,
-            this.ItemForTransactions});
+            this.ItemForAmount});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(567, 178);
-            // 
-            // NameTextEdit
-            // 
-            this.NameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.accountBindingSource, "Name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.NameTextEdit.Location = new System.Drawing.Point(65, 12);
-            this.NameTextEdit.MenuManager = this.ribbonControl1;
-            this.NameTextEdit.Name = "NameTextEdit";
-            this.NameTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.NameTextEdit.Size = new System.Drawing.Size(510, 20);
-            this.NameTextEdit.StyleController = this.dataLayoutControl1;
-            this.NameTextEdit.TabIndex = 4;
+            this.layoutControlGroup2.Size = new System.Drawing.Size(567, 48);
             // 
             // ItemForName
             // 
@@ -382,51 +396,6 @@
             this.ItemForAmount.Size = new System.Drawing.Size(567, 24);
             this.ItemForAmount.TextSize = new System.Drawing.Size(49, 13);
             // 
-            // TransactionsGridControl
-            // 
-            this.TransactionsGridControl.DataBindings.Add(new System.Windows.Forms.Binding("DataSource", this.accountBindingSource, "Transactions", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.TransactionsGridControl.Location = new System.Drawing.Point(12, 60);
-            this.TransactionsGridControl.MainView = this.gridView1;
-            this.TransactionsGridControl.MenuManager = this.ribbonControl1;
-            this.TransactionsGridControl.Name = "TransactionsGridControl";
-            this.TransactionsGridControl.Size = new System.Drawing.Size(563, 126);
-            this.TransactionsGridControl.TabIndex = 6;
-            this.TransactionsGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // ItemForTransactions
-            // 
-            this.ItemForTransactions.Control = this.TransactionsGridControl;
-            this.ItemForTransactions.Location = new System.Drawing.Point(0, 48);
-            this.ItemForTransactions.Name = "ItemForTransactions";
-            this.ItemForTransactions.Size = new System.Drawing.Size(567, 130);
-            this.ItemForTransactions.StartNewLine = true;
-            this.ItemForTransactions.Text = "Transactions";
-            this.ItemForTransactions.TextSize = new System.Drawing.Size(0, 0);
-            this.ItemForTransactions.TextVisible = false;
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.TransactionsGridControl;
-            this.gridView1.Name = "gridView1";
-            // 
-            // AmountTextEdit
-            // 
-            this.AmountTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.accountBindingSource, "Amount", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.AmountTextEdit.Location = new System.Drawing.Point(65, 36);
-            this.AmountTextEdit.MenuManager = this.ribbonControl1;
-            this.AmountTextEdit.Name = "AmountTextEdit";
-            this.AmountTextEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.AmountTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.AmountTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.AmountTextEdit.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
-            this.AmountTextEdit.Properties.Mask.EditMask = "c";
-            this.AmountTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.AmountTextEdit.Size = new System.Drawing.Size(510, 20);
-            this.AmountTextEdit.StyleController = this.dataLayoutControl1;
-            this.AmountTextEdit.TabIndex = 5;
-            // 
             // AccountsEditFormView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -434,22 +403,19 @@
             this.Controls.Add(this.dataLayoutControl1);
             this.Controls.Add(this.ribbonControl1);
             this.Name = "AccountsEditFormView";
-            this.Size = new System.Drawing.Size(587, 339);
+            this.Size = new System.Drawing.Size(587, 209);
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NameTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AmountTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForAmount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TransactionsGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForTransactions)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AmountTextEdit.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -486,13 +452,10 @@
         private DevExpress.XtraDataLayout.DataLayoutControl dataLayoutControl1;
         private DevExpress.XtraEditors.TextEdit NameTextEdit;
         private System.Windows.Forms.BindingSource accountBindingSource;
-        private DevExpress.XtraGrid.GridControl TransactionsGridControl;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.SpinEdit AmountTextEdit;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
         private DevExpress.XtraLayout.LayoutControlItem ItemForName;
         private DevExpress.XtraLayout.LayoutControlItem ItemForAmount;
-        private DevExpress.XtraLayout.LayoutControlItem ItemForTransactions;
     }
 }
